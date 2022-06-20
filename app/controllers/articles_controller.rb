@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show]
 
   def index
+    raise StandarError
     @articles = Article.all
   end
 
@@ -21,10 +22,10 @@ class ArticlesController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
   end
-  
+
   def update
     if @article.update(article_params)
       redirect_to article_path(@article), notice: '更新しました'
@@ -46,6 +47,6 @@ class ArticlesController < ApplicationController
   end
 
   def set_article
-    @article = Article.find(params[:id]) 
+    @article = Article.find(params[:id])
   end
 end
