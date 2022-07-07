@@ -26,6 +26,9 @@ gem 'binding_of_caller'
 gem 'devise'
 gem 'faker'
 gem 'hamlit'
+gem 'aws-sdk-s3', require: false
+# gem 'aws-sdk-s3', '1.48.0', require: false
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -39,7 +42,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rubocop-rails'
   gem 'dotenv-rails'
-  gem 'aws-sdk-s3', '1.48.0', require: false
 end
 
 group :development do
