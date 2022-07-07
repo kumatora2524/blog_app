@@ -39,7 +39,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rubocop-rails'
   gem 'dotenv-rails'
-  gem 'aws-sdk-s3', require: false
+  gem 'aws-sdk-s3', '1.48', require: false
 end
 
 group :development do
